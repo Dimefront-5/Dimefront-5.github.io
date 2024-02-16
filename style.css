@@ -3,6 +3,23 @@ header {
     text-align: center; 
     padding: 20px;
  }
+
+.header {
+    background-color: #f5f5dc;
+    font-family: Helvetica;
+    font-size: 30px;
+    color: #000000;
+ }
+ /*footer style*/
+ footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f5f5dc;
+    font-family: Helvetica;
+    font-size: 20px;
+    color: #000000;
+}
+
 /*navigation bar style*/
 nav {
     text-align: center;
