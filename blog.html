@@ -49,6 +49,27 @@
             </div>
             <br>
 
+              <h3> EHC Lecture Series: Data Exploitation & Processing - 4/29/24</h3>
+
+              <article>
+                This lecture topic was the first EHC lecture I delivered when I became secretary of EHC. This lecture was inspired by a previous job experience from a summer internship.
+
+                The inspiration came from me wanting to showcase how we can correlate data and other information to help make decisions on what is happening and how to track down bad guys. <br>The lecture was also chosen because at this point, I was nervous about what I could talk about.
+
+                I wasn't confident in my abilities to present or on what I know, so the presentation is like some I had seen before. 
+                
+                <br> I later went back through and remade my lecture and delivered it again my final semester. I think it was a lot of fun on something that is crucial to investigations or in correlating data. It really puts you in the mind of someone who wants to investigate something.
+
+                <br> I made my own labs with some help from some other interns and created a fun dataset that I could use for them to practice on. I tried to conduct each lab as a real investigation by only giving them limited information.
+
+                <br> The hardest issue with this lecture is trying to fit all the material in a short amount of time. Most of the lecture was stuff we did over a week of training that I had condensed. I think it would be better to have a longer workshop to really get the material across.
+
+                <br>
+
+                <A href="https://drive.google.com/drive/folders/1CBBo1cPFwIST0fLMccm0qkzyEou1RHBY?usp=drive_link">EHC Public Drive</A>
+              </article>
+
+              <br>
               <h3> Previous EHC Lecture Reviews: Personal Security - 4/17/24</h3>
               <article>
                 Since my time as an EHC officer has come to my end, I thought it would be fun to go back and talk about some of the other lectures I have made and my thought process behind why I made it/chose the topic. <br>
@@ -69,7 +90,8 @@
  
                 <A href="https://docs.google.com/presentation/d/1wKqt6PTkpaJ9ATa5XRSEZ77rCTYiA1Sj/edit?usp=drive_link&ouid=104691000974196468257&rtpof=true&sd=true">EHC Public Drive</A>
               </article>
-
+              
+              <br>
               <h3> RE/MA Lecture Series: Advanced Dynamic Analysis - 4/10/24</h3>
               <article>
                 My final lecture for EHC and for the series of RE/MA was of course on advanced dynamic analysis. This entails just talking about debuggers and how to use them.
@@ -128,7 +150,28 @@
               <h1><u>Class Projects</u></h1>
             </div>
 
+              <br>
+              <h3>HashCracker - 4/29/2024</h3>
               <article>
+                I recently finished my final course at Auburn University called Advanced Computer and Network Security. In the class we have a group project where we work on something cybersecurity related.  My partner and I decided to see if we could make a custom brute force password cracker that can detect hashes and crack them automatically. 
+                <br>
+                This was a fun project were trying to make something as efficient as possible became a major factor.  We decided to write the tool in GO, a language known for its efficiency and multithreading use. We called the tool “Hash Slinging Slasher” (SpongeBob Reference) and initially the creation was focused on being able to identify hashes and automatically crack them. 
+                <br>
+                At first thought, it may sound simple, but it is a lot more complicated than I originally realized. The lowest hanging fruit is just to look at the length of the hash, if the length is standard for an algorithm, then we know what algorithm to start cracking the hash with. This is a naïve approach, as some hashes have the same length as MD4 and MD5. That isn’t a definitive way to identify hashes, and most hashes don’t have different character sets that we can use to identify them either. 
+                <br>
+                We started to parse shadow files and used the initial hashing algorithm distinction to start automatically cracking passwords. A few issues, shadow only uses a couple of hashing algorithms and of course not every hash will be in a shadow file format. Another issue was with time related to working on the project of not being able to support yescrypt and bcrypt, we just didn’t have enough time to figure out how GO implements their hashing algorithms. 
+                <br>
+                In the future I would like to spend more time implementing other hashing algorithms and allowing users to just tell us the algorithm.
+                <br>
+                When it comes to efficiency, obviously our tool isn’t up to industry standard, but I wanted to make it as fast as possible. We did this through multithreading, for wordlists we just cut it into 20 threads and have each thread work on a different part of the wordlist. For iterative, we have 95 threads (one for each password possible character in ASCII) and have a thread iteratively crack a password with a different starting letter.
+                
+                <br>
+                I also implement benchmarking in case a user needs to stop cracking, so they can pick back up where they left off and starting cracking hashes again. I did this by making each thread store the last guess in a text file in a folder related to the hash.  Not the most storage effective but I didn’t want to deal with concurrency issues and make the program slower. This was the fastest way I could figure out how to do this in the limited amount of time we had.
+                <br>
+                
+                If you’d like to see our code and use it yourself, check the link out!
+                
+                <A href="https://github.com/Dimefront-5/HashCracker">Hash Slinging Slasher</A>
               </article>
 
 
