@@ -8,12 +8,33 @@
       background-color: #161B22;
       color: #FCFCFC;
     }
+    .btn-primary {
+    background-color: #161B22;
+    border-color: #161B22;
+    color: black;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 1px 8px;
+    cursor: pointer;
+    border-radius: 12px;
+    }
+
+    .btn-primary:hover {
+        background-color: #0069d9;
+        border-color: #0062cc;
+    }
+    
   </style>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dimefront's Blog</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+<section id = "top">
+        
 
 <body style = "background-color: #161B22;">
   <header>
@@ -38,18 +59,37 @@
       </div>
     </nav>
   </header>
+</section>
 
   <main class="container mt-4 blog">
     <div class="row">
       <div class="col-md-8">
+        <a href="#EHC" class="btn-primary">EHC</a>
+        <a href="#Personal Projects" class="btn-primary">Personal Projects</a>
+        <a href="#Class Projects" class="btn-primary">Class Projects</a>
 
-
+            <section id  = "EHC">
             <div class="page-header">
               <h1><u>EHC</u></h1>      
             </div>
             <br>
 
-              <h3> EHC Lecture Series: Data Exploitation & Processing - 4/29/24</h3>
+              <h3> EHC Lecture Review: DNS, PKI, and TLS Certificates 5/1/2024</h3>
+
+              <article>
+                This assortment of topic ideas came from an officer who was interested in learning more on these topics. I decided to create a lecture revolving around PKI and TLS with an introduction to DNS. <br>
+
+                PKI and TLS obviously relate, but DNS was somewhat of an outside topic to the other two. So, trying to work in why we were covering all three was fun to research and create.
+
+                The main thing was realizing the best way to protect against dns typical dns attacks was to use DNSSEC which is a part of the PKI system. <br>
+
+                I initially delivered this lecture in spring 2023, but then redelivered it for an Auburn's auburnhacks competition in 2024. I revamped and added some more context.  And gave a demonstration on what happens if we don’t have TLS enabled on a host on the internet. Then sadly got blocked from Auburn’s Wi-Fi for accidentally running Wireshark on my host. <br>
+
+                I think one of the main things I wanted to stress was how PKI is basically a system of trust at the end of the day. We must trust that the certificates have been signed correctly and that they are who they say they are. The internet is built on trust at the end of the day. <br>
+                <A href="https://docs.google.com/presentation/d/1tEU5ImjY00eirDiEfXHbvU3QTNe0Zu8G/edit?usp=drive_link&ouid=104691000974196468257&rtpof=true&sd=true">EHC Public Drive</A>
+              </article>
+
+              <h3> EHC Lecture Review: Data Exploitation & Processing - 4/29/24</h3>
 
               <article>
                 This lecture topic was the first EHC lecture I delivered when I became secretary of EHC. This lecture was inspired by a previous job experience from a summer internship.
@@ -136,18 +176,23 @@
                 <A href="https://drive.google.com/drive/folders/1F-PPXY5JhBEle6PFVM7J2add-eL_8-ig?usp=drive_link">EHC Public Drive</A>
               </article>
 
+            </section>
 
+
+            <section id = "Personal Projects">
             <div class = "page-header">
-              <h1><u>Personal Projects</u></h1>
+              <h1><u>Personal Projects</u> <a href="#top"> <button type="button" class="btn-primary">Back to Top</button></a></h1></h1>
             </div>
-
 
               <article>
               </article>
+            
+            </section>
 
 
+            <section id = "Class Projects">
             <div class = "page-header">
-              <h1><u>Class Projects</u></h1>
+              <h1><u>Class Projects</u> <a href="#top"> <button type="button" class="btn-primary">Back to Top</button></a></h1></h1>
             </div>
 
               <br>
@@ -174,6 +219,7 @@
                 <A href="https://github.com/Dimefront-5/HashCracker">Hash Slinging Slasher</A>
               </article>
 
+            </section>
 
 
       </div>
